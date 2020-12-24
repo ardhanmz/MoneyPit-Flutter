@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class HomeView extends StatefulWidget {
   HomeViewState createState() => HomeViewState();
 }
 
 class HomeViewState extends State<HomeView> {
+  static final DateTime now = DateTime.now();
+  static final formatter = DateFormat('EEEE, dd MMMM yyyy');
+  final String formatted = formatter.format(now);
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -17,7 +22,16 @@ class HomeViewState extends State<HomeView> {
         child: Container(
           child: AppBar(
             elevation: 0.0,
-            title: Text("Test"),
+            automaticallyImplyLeading: false,
+            title: Text(
+              "MoneyPit",
+              style: GoogleFonts.pacifico(
+                color: Colors.white,
+                fontSize: ScreenUtil().setSp(45),
+                letterSpacing: .5,
+              ),
+            ),
+            centerTitle: true,
           ),
         ),
         preferredSize: Size.fromHeight(kToolbarHeight),
@@ -101,37 +115,72 @@ class HomeViewState extends State<HomeView> {
                       borderRadius: BorderRadius.circular(10)),
                   child: Container(
                     width: MediaQuery.of(context).size.height * .90,
-                    height: 220,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.scanner,
-                              color: Colors.deepPurple,
-                              size: 45,
-                            ),
-                            Text("SCAN QR")
-                          ],
+                    height: ScreenUtil().setHeight(300),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: ScreenUtil().setHeight(20),
                         ),
                         Container(
-                          height: 100,
-                          width: 2,
-                          color: Colors.deepPurple,
+                            child: Text(
+                          formatted,
+                          style: GoogleFonts.lato(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: ScreenUtil().setSp(30)),
+                        )),
+                        SizedBox(
+                          height: ScreenUtil().setHeight(20),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Icon(
-                              Icons.bluetooth,
-                              color: Colors.deepPurple,
-                              size: 45,
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.scanner,
+                                  color: Colors.deepPurple,
+                                  size: 45,
+                                ),
+                                Text("SCAN QR")
+                              ],
                             ),
-                            Text("BEACON")
+                            Container(
+                              height: 100,
+                              width: 2,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  child: SvgPicture.asset(
+                                      'assets/svg/expenses.svg',
+                                      semanticsLabel: 'A red up arrow'),
+                                  width: ScreenUtil().setWidth(75),
+                                  height: ScreenUtil().setHeight(75),
+                                ),
+                                SizedBox(
+                                  height: ScreenUtil().setHeight(10),
+                                ),
+                                Text(
+                                  "Pengeluaran",
+                                  style: GoogleFonts.lato(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: ScreenUtil().setSp(25)),
+                                ),
+                                Text(
+                                  "Rp 3.000.000",
+                                  style: GoogleFonts.lato(
+                                      color: Colors.black,
+                                      fontSize: ScreenUtil().setSp(25)),
+                                )
+                              ],
+                            )
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
