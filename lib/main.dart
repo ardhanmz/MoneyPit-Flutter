@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneypit_flutter/views/ChangePasswordView.dart';
+import 'package:moneypit_flutter/views/HomeView.dart';
 import 'package:moneypit_flutter/views/LandingView.dart';
 import 'package:moneypit_flutter/views/SignInView.dart';
 import 'package:moneypit_flutter/views/SignUpView.dart';
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => LandingView(),
         '/SignUp': (context) => SignUpView(),
         '/SignIn': (context) => SingInView(),
-        '/ChangePassword': (context) => ChangePasswordView()
+        '/ChangePassword': (context) => ChangePasswordView(),
+        '/Home': (context) => HomeView()
       },
     );
   }

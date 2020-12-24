@@ -102,7 +102,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: ScreenUtil().setHeight(100),
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/SignIn');
+                    Navigator.pushNamed(context, '/ChangePassword');
                   },
                   child: Text(
                     "Lanjutkan",
