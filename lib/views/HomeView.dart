@@ -106,16 +106,16 @@ class HomeViewState extends State<HomeView> {
               ),
               Positioned(
                 top: MediaQuery.of(context).size.height * .12,
-                left: 15,
-                right: 15,
+                left: 25,
+                right: 25,
                 child: Card(
                   elevation: 8,
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   child: Container(
-                    width: MediaQuery.of(context).size.height * .90,
-                    height: ScreenUtil().setHeight(300),
+                    width: ScreenUtil().setWidth(1000),
+                    height: ScreenUtil().setHeight(250),
                     child: Column(
                       children: [
                         SizedBox(
@@ -138,12 +138,29 @@ class HomeViewState extends State<HomeView> {
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Icon(
-                                  Icons.scanner,
-                                  color: Colors.deepPurple,
-                                  size: 45,
+                                Container(
+                                  child: SvgPicture.asset(
+                                      'assets/svg/salary.svg',
+                                      semanticsLabel: 'A red up arrow'),
+                                  width: ScreenUtil().setWidth(75),
+                                  height: ScreenUtil().setHeight(75),
                                 ),
-                                Text("SCAN QR")
+                                SizedBox(
+                                  height: ScreenUtil().setHeight(10),
+                                ),
+                                Text(
+                                  "Pemasukan",
+                                  style: GoogleFonts.lato(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: ScreenUtil().setSp(25)),
+                                ),
+                                Text(
+                                  "Rp 5.000.000",
+                                  style: GoogleFonts.lato(
+                                      color: Colors.black,
+                                      fontSize: ScreenUtil().setSp(25)),
+                                )
                               ],
                             ),
                             Container(
@@ -186,9 +203,59 @@ class HomeViewState extends State<HomeView> {
                   ),
                 ),
               ),
+              Positioned(
+                top: MediaQuery.of(context).size.height * .35,
+                left: 25,
+                right: 25,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                            width: ScreenUtil().setWidth(40),
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Divider(
+                              color: Theme.of(context).primaryColor,
+                              height: ScreenUtil().setHeight(50),
+                            )),
+                        Text("Bulan Ini",
+                            style: GoogleFonts.lato(
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: ScreenUtil().setSp(30))),
+                        Container(
+                            width: ScreenUtil().setWidth(40),
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Divider(
+                              color: Theme.of(context).primaryColor,
+                              height: ScreenUtil().setHeight(50),
+                            )),
+                        Spacer(),
+                        IconButton(
+                            iconSize: 30,
+                            icon: Icon(
+                              Icons.navigate_next,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                            onPressed: () {})
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        child: Icon(Icons.navigation),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
     );
   }
