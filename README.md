@@ -3,6 +3,8 @@
 An Open Source Simple Flutter Project for tracking your budget monthly. 
 You can set your budget, add your expense and monitor easily. this project is WIP (Work In progress).
 if you wan't to contribute to this project, you can fork and merge your work and collaborate to make this app better :)
+for more information you can send me an email to : [E-Mail][mailto://ardhan.mz@outlook.com] or PM me :D
+lets make world better together :D
 
 # List of feature (WIP): 
 - Setting Budget
