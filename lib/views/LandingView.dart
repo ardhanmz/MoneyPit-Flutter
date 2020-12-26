@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:moneypit_flutter/views/SignUpView.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
 class LandingView extends StatefulWidget {
   LandingViewState createState() => LandingViewState();
@@ -56,7 +56,7 @@ class LandingViewState extends State<LandingView> {
                   Navigator.pushNamed(context, '/SignIn');
                 },
                 child: Text(
-                  "Lanjutkan",
+                  S.of(context).next,
                   style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
 class SingInView extends StatefulWidget {
   SignInViewState createState() => SignInViewState();
@@ -86,7 +87,7 @@ class SignInViewState extends State<SingInView> {
                     Navigator.pushNamed(context, '/Home');
                   },
                   child: Text(
-                    "Lanjutkan",
+                    S.of(context).login,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -107,7 +108,7 @@ class SignInViewState extends State<SingInView> {
                         Navigator.pushNamed(context, '/SignUp');
                       },
                       child: Text(
-                        "Daftar",
+                        S.of(context).register,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 import 'package:moneypit_flutter/views/AddExpenseView.dart';
 import 'package:moneypit_flutter/views/ChangePasswordView.dart';
 import 'package:moneypit_flutter/views/HomeView.dart';
@@ -19,6 +21,13 @@ class MyApp extends StatelessWidget {
     const primaryDarkColor = Color(0xff00766c);
     const primaryTextColor = Color(0xff000000);
     return MaterialApp(
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       title: 'MoneyPit',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

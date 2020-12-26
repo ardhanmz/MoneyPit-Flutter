@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
 class ChangePasswordView extends StatefulWidget {
   ChangePassWordViewState createState() => ChangePassWordViewState();
@@ -97,7 +98,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                         Navigator.pushNamed(context, '/SignIn');
                       },
                       child: Text(
-                        "Masuk",
+                        S.of(context).login,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),
