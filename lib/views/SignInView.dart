@@ -13,25 +13,45 @@ class SignInViewState extends State<SingInView> {
     ScreenUtil.init(context,
         designSize: Size(750, 1334), allowFontScaling: true);
     return Scaffold(
+      appBar: PreferredSize(
+        child: Container(
+          child: AppBar(
+            elevation: 0.0,
+            automaticallyImplyLeading: false,
+          ),
+        ),
+        preferredSize: (Size.fromHeight(0)),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
-              SizedBox(
-                height: ScreenUtil().setHeight(200),
-              ),
-              Text(
-                "MoneyPit",
-                style: GoogleFonts.pacifico(
-                  textStyle: TextStyle(
+              Container(
+                height: ScreenUtil().setHeight(500),
+                width: MediaQuery.of(context).size.width,
+                child: ClipPath(
+                  clipper:
+                      CustomShape(), // this is my own class which extendsCustomClipper
+                  child: Container(
+                    height: ScreenUtil().setHeight(150),
                     color: Theme.of(context).primaryColor,
-                    letterSpacing: .5,
-                    fontSize: ScreenUtil().setSp(120),
+                    child: Center(
+                      child: Text(
+                        "MoneyPit",
+                        style: GoogleFonts.pacifico(
+                          textStyle: TextStyle(
+                            color: Colors.white,
+                            letterSpacing: .5,
+                            fontSize: ScreenUtil().setSp(120),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
               SizedBox(
-                height: ScreenUtil().setHeight(300),
+                height: ScreenUtil().setHeight(100),
               ),
               Container(
                 width: ScreenUtil().setWidth(600),
@@ -103,5 +123,25 @@ class SignInViewState extends State<SingInView> {
         ),
       ),
     );
+  }
+}
+
+class CustomShape extends CustomClipper<Path> {
+  @override
+  getClip(Size size) {
+    double height = size.height;
+    double width = size.width;
+    var path = Path();
+    path.lineTo(0, height - 50);
+    path.quadraticBezierTo(width / 2, height, width, height - 50);
+    path.lineTo(width, 0);
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper oldClipper) {
+    return true;
   }
 }
