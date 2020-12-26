@@ -63,7 +63,7 @@ class SignInViewState extends State<SingInView> {
                 height: ScreenUtil().setHeight(100),
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/SignIn');
+                    Navigator.pushNamed(context, '/Home');
                   },
                   child: Text(
                     "Lanjutkan",
