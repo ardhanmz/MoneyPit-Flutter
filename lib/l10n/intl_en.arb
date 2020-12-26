@@ -1,5 +1,23 @@
 {
         "login": "Login",
         "register": "Register",
-        "next": "Next"
+        "next": "Next",
+        "send": "Send",
+        "dontHaveAccount": "Don't Have Account ?",
+        "haveAccount": "Already Have Account ?",
+        "username": "Username",
+        "password": "Password",
+        "repeat_password": "Repeat Password",
+        "registration": "Registration",
+        "subtitle_registration": "Please fill form bellow",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email_address": "E-mail Address",
+        "income": "Income",
+        "expense": "Expense",
+        "create_password": "Create Password",
+        "subtitle_create_password": "Please fill Password",
+        "this_month": "This Month",
+        "add_expense": "Add Expense"
+        
 }

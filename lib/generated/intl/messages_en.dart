@@ -21,8 +21,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "add_expense" : MessageLookupByLibrary.simpleMessage("Add Expense"),
+    "create_password" : MessageLookupByLibrary.simpleMessage("Create Password"),
+    "dontHaveAccount" : MessageLookupByLibrary.simpleMessage("Don\'t Have Account ?"),
+    "email_address" : MessageLookupByLibrary.simpleMessage("E-mail Address"),
+    "expense" : MessageLookupByLibrary.simpleMessage("Expense"),
+    "first_name" : MessageLookupByLibrary.simpleMessage("First Name"),
+    "haveAccount" : MessageLookupByLibrary.simpleMessage("Already Have Account ?"),
+    "income" : MessageLookupByLibrary.simpleMessage("Income"),
+    "last_name" : MessageLookupByLibrary.simpleMessage("Last Name"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "next" : MessageLookupByLibrary.simpleMessage("Next"),
-    "register" : MessageLookupByLibrary.simpleMessage("Register")
+    "password" : MessageLookupByLibrary.simpleMessage("Password"),
+    "register" : MessageLookupByLibrary.simpleMessage("Register"),
+    "registration" : MessageLookupByLibrary.simpleMessage("Registration"),
+    "repeat_password" : MessageLookupByLibrary.simpleMessage("Repeat Password"),
+    "send" : MessageLookupByLibrary.simpleMessage("Send"),
+    "subtitle_create_password" : MessageLookupByLibrary.simpleMessage("Please fill Password"),
+    "subtitle_registration" : MessageLookupByLibrary.simpleMessage("Please fill form bellow"),
+    "this_month" : MessageLookupByLibrary.simpleMessage("This Month"),
+    "username" : MessageLookupByLibrary.simpleMessage("Username")
   };
 }

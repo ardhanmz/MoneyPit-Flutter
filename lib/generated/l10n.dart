@@ -64,6 +64,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't Have Account ?`
+  String get dontHaveAccount {
+    return Intl.message(
+      'Don\'t Have Account ?',
+      name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already Have Account ?`
+  String get haveAccount {
+    return Intl.message(
+      'Already Have Account ?',
+      name: 'haveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat Password`
+  String get repeat_password {
+    return Intl.message(
+      'Repeat Password',
+      name: 'repeat_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registration`
+  String get registration {
+    return Intl.message(
+      'Registration',
+      name: 'registration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please fill form bellow`
+  String get subtitle_registration {
+    return Intl.message(
+      'Please fill form bellow',
+      name: 'subtitle_registration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get first_name {
+    return Intl.message(
+      'First Name',
+      name: 'first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get last_name {
+    return Intl.message(
+      'Last Name',
+      name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-mail Address`
+  String get email_address {
+    return Intl.message(
+      'E-mail Address',
+      name: 'email_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income`
+  String get income {
+    return Intl.message(
+      'Income',
+      name: 'income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expense`
+  String get expense {
+    return Intl.message(
+      'Expense',
+      name: 'expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Password`
+  String get create_password {
+    return Intl.message(
+      'Create Password',
+      name: 'create_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please fill Password`
+  String get subtitle_create_password {
+    return Intl.message(
+      'Please fill Password',
+      name: 'subtitle_create_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This Month`
+  String get this_month {
+    return Intl.message(
+      'This Month',
+      name: 'this_month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Expense`
+  String get add_expense {
+    return Intl.message(
+      'Add Expense',
+      name: 'add_expense',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

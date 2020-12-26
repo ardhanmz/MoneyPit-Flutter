@@ -59,7 +59,7 @@ class SignInViewState extends State<SingInView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Username',
+                      labelText: S.of(context).username,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -72,7 +72,7 @@ class SignInViewState extends State<SingInView> {
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Password',
+                      labelText: S.of(context).password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -99,7 +99,7 @@ class SignInViewState extends State<SingInView> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Belum Mempunyai Akun?",
+                      S.of(context).dontHaveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
                     FlatButton(

@@ -21,8 +21,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "add_expense" : MessageLookupByLibrary.simpleMessage("Tambah Pengeluaran"),
+    "create_password" : MessageLookupByLibrary.simpleMessage("Buat Kata Sandi"),
+    "dontHaveAccount" : MessageLookupByLibrary.simpleMessage("Belum Memiliki Akun ?"),
+    "email_address" : MessageLookupByLibrary.simpleMessage("Alamat E-Mail"),
+    "expense" : MessageLookupByLibrary.simpleMessage("Pengeluaran"),
+    "first_name" : MessageLookupByLibrary.simpleMessage("Nama Depan"),
+    "haveAccount" : MessageLookupByLibrary.simpleMessage("Sudah Memiliki Akun ?"),
+    "income" : MessageLookupByLibrary.simpleMessage("Pendapatan"),
+    "last_name" : MessageLookupByLibrary.simpleMessage("Nama Belakang"),
     "login" : MessageLookupByLibrary.simpleMessage("Masuk"),
     "next" : MessageLookupByLibrary.simpleMessage("Selanjutnya"),
-    "register" : MessageLookupByLibrary.simpleMessage("Daftar")
+    "password" : MessageLookupByLibrary.simpleMessage("Kata Sandi"),
+    "register" : MessageLookupByLibrary.simpleMessage("Daftar"),
+    "registration" : MessageLookupByLibrary.simpleMessage("Pendaftaran"),
+    "repeat_password" : MessageLookupByLibrary.simpleMessage("Ulangi Kata Sandi"),
+    "send" : MessageLookupByLibrary.simpleMessage("Kirim"),
+    "subtitle_create_password" : MessageLookupByLibrary.simpleMessage("Mohon Isi Kata Sandi"),
+    "subtitle_registration" : MessageLookupByLibrary.simpleMessage("Mohon Isi Form Di Bawah "),
+    "this_month" : MessageLookupByLibrary.simpleMessage("Bulan Ini"),
+    "username" : MessageLookupByLibrary.simpleMessage("Nama Pengguna")
   };
 }

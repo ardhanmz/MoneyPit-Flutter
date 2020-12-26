@@ -1,5 +1,22 @@
 {
     "login": "Masuk",
     "register": "Daftar",
-    "next": "Selanjutnya"
+    "next": "Selanjutnya",
+    "send": "Kirim",
+    "dontHaveAccount": "Belum Memiliki Akun ?",
+    "haveAccount": "Sudah Memiliki Akun ?",
+    "username": "Nama Pengguna",
+    "password": "Kata Sandi",
+    "repeat_password": "Ulangi Kata Sandi",
+    "registration": "Pendaftaran",
+    "subtitle_registration": "Mohon Isi Form Di Bawah ",
+    "first_name": "Nama Depan",
+    "last_name": "Nama Belakang",
+    "email_address": "Alamat E-Mail",
+    "income": "Pendapatan",
+    "expense": "Pengeluaran",
+    "create_password": "Buat Kata Sandi",
+    "subtitle_create_password": "Mohon Isi Kata Sandi",
+    "this_month": "Bulan Ini",
+    "add_expense": "Tambah Pengeluaran"
 }

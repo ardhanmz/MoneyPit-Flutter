@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
 class SignUpView extends StatefulWidget {
   SignUpView({Key key}) : super(key: key);
@@ -29,7 +30,7 @@ class _SignUpViewState extends State<SignUpView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Pendaftaran",
+                      S.of(context).registration,
                       style: GoogleFonts.lato(
                           fontSize: ScreenUtil().setSp(50),
                           fontWeight: FontWeight.bold),
@@ -38,7 +39,7 @@ class _SignUpViewState extends State<SignUpView> {
                       height: ScreenUtil().setHeight(10),
                     ),
                     Text(
-                      "Mohon isi informasi dibawah untuk memulai",
+                      S.of(context).subtitle_registration,
                       style: GoogleFonts.lato(
                         fontSize: ScreenUtil().setSp(30),
                       ),
@@ -54,7 +55,7 @@ class _SignUpViewState extends State<SignUpView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Nama Depan',
+                      labelText: S.of(context).first_name,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -66,7 +67,7 @@ class _SignUpViewState extends State<SignUpView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Nama Belakang',
+                      labelText: S.of(context).last_name,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -78,7 +79,7 @@ class _SignUpViewState extends State<SignUpView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Alamat Email',
+                      labelText: S.of(context).email_address,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -90,7 +91,7 @@ class _SignUpViewState extends State<SignUpView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Penghasilan',
+                      labelText: S.of(context).income,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -105,7 +106,7 @@ class _SignUpViewState extends State<SignUpView> {
                     Navigator.pushNamed(context, '/ChangePassword');
                   },
                   child: Text(
-                    "Lanjutkan",
+                    S.of(context).next,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -117,7 +118,7 @@ class _SignUpViewState extends State<SignUpView> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Sudah Mempunyai Akun?",
+                      S.of(context).haveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
                     FlatButton(
@@ -126,7 +127,7 @@ class _SignUpViewState extends State<SignUpView> {
                         Navigator.pushNamed(context, '/SignIn');
                       },
                       child: Text(
-                        "Masuk",
+                        S.of(context).login,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),
