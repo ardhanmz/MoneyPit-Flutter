@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moneypit_flutter/generated/l10n.dart';
@@ -54,15 +55,7 @@ class SignInViewState extends State<SingInView> {
               SizedBox(
                 height: ScreenUtil().setHeight(100),
               ),
-              Container(
-                width: ScreenUtil().setWidth(600),
-                child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: S.of(context).username,
-                      labelStyle: GoogleFonts.lato()),
-                ),
-              ),
+              UsernameField(),
               SizedBox(
                 height: ScreenUtil().setHeight(50),
               ),
@@ -144,5 +137,25 @@ class CustomShape extends CustomClipper<Path> {
   @override
   bool shouldReclip(CustomClipper oldClipper) {
     return true;
+  }
+}
+
+class UsernameField extends HookWidget {
+  @override
+  Widget build(BuildContext context) {
+    final myTextControllerUpdates = TextEditingController();
+    // TODO: implement build
+    final controller = useTextEditingController(text: 'initial text');
+    final update = useValueListenable(myTextControllerUpdates);
+
+    return Container(
+      width: ScreenUtil().setWidth(600),
+      child: TextField(
+        decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: S.of(context).username,
+            labelStyle: GoogleFonts.lato()),
+      ),
+    );
   }
 }

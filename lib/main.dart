@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:moneypit_flutter/generated/l10n.dart';
-import 'package:moneypit_flutter/views/AddExpenseView.dart';
-import 'package:moneypit_flutter/views/ChangePasswordView.dart';
-import 'package:moneypit_flutter/views/HomeView.dart';
-import 'package:moneypit_flutter/views/LandingView.dart';
-import 'package:moneypit_flutter/views/SignInView.dart';
-import 'package:moneypit_flutter/views/SignUpView.dart';
+import 'package:moneypit_flutter/View/AddExpenseView.dart';
+import 'package:moneypit_flutter/View/ChangePasswordView.dart';
+import 'package:moneypit_flutter/View/HomeView.dart';
+import 'package:moneypit_flutter/View/LandingView.dart';
+import 'package:moneypit_flutter/View/SignInView.dart';
+import 'package:moneypit_flutter/View/SignUpView.dart';
 
 void main() {
   runApp(MyApp());
