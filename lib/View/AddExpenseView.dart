@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
-class AddExpenseView extends StatefulWidget {
-  AddExpenseViewState createState() => AddExpenseViewState();
-}
-
-class AddExpenseViewState extends State<AddExpenseView> {
+class AddExpenseView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,
@@ -44,7 +42,7 @@ class AddExpenseViewState extends State<AddExpenseView> {
                     top: 10,
                     left: 20,
                     child: Text(
-                      "Tambah Pengeluaran",
+                      S.of(context).add_expense,
                       style: GoogleFonts.lato(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:moneypit_flutter/generated/l10n.dart';
 
-class HomeView extends StatefulWidget {
-  HomeViewState createState() => HomeViewState();
-}
-
-class HomeViewState extends State<HomeView> {
+class HomeView extends HookWidget {
   static final DateTime now = DateTime.now();
   static final formatter = DateFormat('EEEE, dd MMMM yyyy');
   final String formatted = formatter.format(now);
@@ -149,7 +147,7 @@ class HomeViewState extends State<HomeView> {
                                   height: ScreenUtil().setHeight(10),
                                 ),
                                 Text(
-                                  "Pemasukan",
+                                  S.of(context).income,
                                   style: GoogleFonts.lato(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -182,7 +180,7 @@ class HomeViewState extends State<HomeView> {
                                   height: ScreenUtil().setHeight(10),
                                 ),
                                 Text(
-                                  "Pengeluaran",
+                                  S.of(context).expense,
                                   style: GoogleFonts.lato(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -220,7 +218,7 @@ class HomeViewState extends State<HomeView> {
                               color: Theme.of(context).primaryColor,
                               height: ScreenUtil().setHeight(50),
                             )),
-                        Text("Bulan Ini",
+                        Text(S.of(context).this_month,
                             style: GoogleFonts.lato(
                                 color: Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.bold,

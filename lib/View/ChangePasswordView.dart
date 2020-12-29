@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moneypit_flutter/generated/l10n.dart';
 
-class ChangePasswordView extends StatefulWidget {
-  ChangePassWordViewState createState() => ChangePassWordViewState();
-}
-
-class ChangePassWordViewState extends State<ChangePasswordView> {
+class ChangePasswordView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -28,7 +25,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Buat Kata Sandi",
+                      S.of(context).create_password,
                       style: GoogleFonts.lato(
                           fontSize: ScreenUtil().setSp(50),
                           fontWeight: FontWeight.bold),
@@ -37,7 +34,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                       height: ScreenUtil().setHeight(10),
                     ),
                     Text(
-                      "Mohon masukkan Kata Sandi",
+                      S.of(context).subtitle_create_password,
                       style: GoogleFonts.lato(
                         fontSize: ScreenUtil().setSp(30),
                       ),
@@ -53,7 +50,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Kata Sandi',
+                      labelText: S.of(context).password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -65,7 +62,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Ulangi Kata Sandi',
+                      labelText: S.of(context).repeat_password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -78,7 +75,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                     Navigator.pushNamed(context, '/Home');
                   },
                   child: Text(
-                    "Kirim",
+                    S.of(context).send,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -89,7 +86,7 @@ class ChangePassWordViewState extends State<ChangePasswordView> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      "Sudah Mempunyai Akun?",
+                      S.of(context).haveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
                     FlatButton(
