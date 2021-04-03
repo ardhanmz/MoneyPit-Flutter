@@ -10,6 +10,7 @@ class AddExpenseView extends HookWidget {
     ScreenUtil.init(context,
         designSize: Size(750, 1334), allowFontScaling: true);
     // TODO: implement build
+
     return Scaffold(
       appBar: PreferredSize(
         child: Container(
@@ -52,7 +53,40 @@ class AddExpenseView extends HookWidget {
                   )
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: ScreenUtil().setHeight(20),
+            ),
+            Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Container(
+                  width: ScreenUtil().setWidth(1200),
+                  height: ScreenUtil().setHeight(400),
+                  margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                  padding: EdgeInsets.only(left: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 3.0),
+                    borderRadius: BorderRadius.circular(5),
+                    shape: BoxShape.rectangle,
+                  ),
+                ),
+                Positioned(
+                    left: 30,
+                    top: 12,
+                    child: Container(
+                      padding: EdgeInsets.only(bottom: 10, left: 10, right: 10),
+                      color: Theme.of(context).primaryColor,
+                      child: Text(
+                        'Activity',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )),
+              ],
+            ),
           ],
         ),
       ),
