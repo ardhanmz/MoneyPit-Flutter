@@ -1,0 +1,9 @@
+class UserQuery {
+  static const String TABLE_NAME = "USER";
+  static const String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS $TABLE_NAME"
+      "( USERID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT,"
+      " EMAIL TEXT, INCOME TEXT )";
+  static const String SELECT_ALL = "SELECT * FROM $TABLE_NAME";
+  static const String SELECT_ALL_BY_USERNAME =
+      "SELECT * FROM $TABLE_NAME where USERNAME = ";
+}
