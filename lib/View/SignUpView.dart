@@ -7,8 +7,7 @@ import 'package:moneypit_flutter/generated/l10n.dart';
 class SignUpView extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(750, 1334));
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -24,7 +23,7 @@ class SignUpView extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      S.of(context).registration,
+                      S.of(context)!.registration,
                       style: GoogleFonts.lato(
                           fontSize: ScreenUtil().setSp(50),
                           fontWeight: FontWeight.bold),
@@ -33,7 +32,7 @@ class SignUpView extends HookWidget {
                       height: ScreenUtil().setHeight(10),
                     ),
                     Text(
-                      S.of(context).subtitle_registration,
+                      S.of(context)!.subtitle_registration,
                       style: GoogleFonts.lato(
                         fontSize: ScreenUtil().setSp(30),
                       ),
@@ -49,7 +48,7 @@ class SignUpView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).first_name,
+                      labelText: S.of(context)!.first_name,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -61,7 +60,7 @@ class SignUpView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).last_name,
+                      labelText: S.of(context)!.last_name,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -73,7 +72,7 @@ class SignUpView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).email_address,
+                      labelText: S.of(context)!.email_address,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -85,7 +84,7 @@ class SignUpView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).income,
+                      labelText: S.of(context)!.income,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -95,12 +94,12 @@ class SignUpView extends HookWidget {
               Container(
                 width: ScreenUtil().setWidth(600),
                 height: ScreenUtil().setHeight(100),
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/ChangePassword');
                   },
                   child: Text(
-                    S.of(context).next,
+                    S.of(context)!.next,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -112,16 +111,15 @@ class SignUpView extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      S.of(context).haveAccount,
+                      S.of(context)!.haveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
-                    FlatButton(
-                      padding: EdgeInsets.all(8.0),
+                    TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignIn');
                       },
                       child: Text(
-                        S.of(context).login,
+                        S.of(context)!.login,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),

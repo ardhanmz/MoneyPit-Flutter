@@ -9,8 +9,7 @@ class LandingView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(750, 1334));
     return Scaffold(
       body: SafeArea(
           child: Center(
@@ -47,12 +46,12 @@ class LandingView extends HookWidget {
             Container(
               width: ScreenUtil().setWidth(600),
               height: ScreenUtil().setHeight(100),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/SignIn');
                 },
                 child: Text(
-                  S.of(context).next,
+                  S.of(context)!.next,
                   style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                 ),
               ),

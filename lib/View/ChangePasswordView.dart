@@ -7,9 +7,7 @@ import 'package:moneypit_flutter/generated/l10n.dart';
 class ChangePasswordView extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(750, 1334));
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -25,7 +23,7 @@ class ChangePasswordView extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      S.of(context).create_password,
+                      S.of(context)!.create_password,
                       style: GoogleFonts.lato(
                           fontSize: ScreenUtil().setSp(50),
                           fontWeight: FontWeight.bold),
@@ -34,7 +32,7 @@ class ChangePasswordView extends HookWidget {
                       height: ScreenUtil().setHeight(10),
                     ),
                     Text(
-                      S.of(context).subtitle_create_password,
+                      S.of(context)!.subtitle_create_password,
                       style: GoogleFonts.lato(
                         fontSize: ScreenUtil().setSp(30),
                       ),
@@ -50,7 +48,7 @@ class ChangePasswordView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).password,
+                      labelText: S.of(context)!.password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -62,7 +60,7 @@ class ChangePasswordView extends HookWidget {
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).repeat_password,
+                      labelText: S.of(context)!.repeat_password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -70,12 +68,12 @@ class ChangePasswordView extends HookWidget {
               Container(
                 width: ScreenUtil().setWidth(600),
                 height: ScreenUtil().setHeight(100),
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/Home');
                   },
                   child: Text(
-                    S.of(context).send,
+                    S.of(context)!.send,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -86,16 +84,15 @@ class ChangePasswordView extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      S.of(context).haveAccount,
+                      S.of(context)!.haveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
-                    FlatButton(
-                      padding: EdgeInsets.all(8.0),
+                    TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignIn');
                       },
                       child: Text(
-                        S.of(context).login,
+                        S.of(context)!.login,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),

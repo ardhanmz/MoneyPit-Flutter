@@ -7,9 +7,7 @@ import 'package:moneypit_flutter/generated/l10n.dart';
 class AddExpenseView extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
-    // TODO: implement build
+    ScreenUtil.init(context, designSize: Size(750, 1334));
 
     return Scaffold(
       appBar: PreferredSize(
@@ -43,7 +41,7 @@ class AddExpenseView extends HookWidget {
                     top: 10,
                     left: 20,
                     child: Text(
-                      S.of(context).add_expense,
+                      S.of(context)!.add_expense,
                       style: GoogleFonts.lato(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

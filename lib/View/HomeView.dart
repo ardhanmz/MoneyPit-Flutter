@@ -13,8 +13,7 @@ class HomeView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(750, 1334));
     return Scaffold(
       appBar: PreferredSize(
         child: Container(
@@ -147,7 +146,7 @@ class HomeView extends HookWidget {
                                   height: ScreenUtil().setHeight(10),
                                 ),
                                 Text(
-                                  S.of(context).income,
+                                  S.of(context)!.income,
                                   style: GoogleFonts.lato(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -180,7 +179,7 @@ class HomeView extends HookWidget {
                                   height: ScreenUtil().setHeight(10),
                                 ),
                                 Text(
-                                  S.of(context).expense,
+                                  S.of(context)!.expense,
                                   style: GoogleFonts.lato(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -218,7 +217,7 @@ class HomeView extends HookWidget {
                               color: Theme.of(context).primaryColor,
                               height: ScreenUtil().setHeight(50),
                             )),
-                        Text(S.of(context).this_month,
+                        Text(S.of(context)!.this_month,
                             style: GoogleFonts.lato(
                                 color: Theme.of(context).primaryColor,
                                 fontWeight: FontWeight.bold,

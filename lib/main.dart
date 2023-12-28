@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
     const primaryColor = Color(0xff26a69a);
     const primaryLightColor = Color(0xff64d8cb);
     const primaryDarkColor = Color(0xff00766c);
-    const primaryTextColor = Color(0xff000000);
     return MaterialApp(
       localizationsDelegates: [
         S.delegate,
@@ -49,7 +48,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.0),
             ),
             buttonColor: primaryColor),
-        accentColor: Colors.yellow,
+        hintColor: Colors.yellow,
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.

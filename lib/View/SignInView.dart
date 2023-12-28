@@ -12,8 +12,7 @@ class SignInViewState extends State<SingInView> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context, designSize: Size(750, 1334));
     return Scaffold(
       appBar: PreferredSize(
         child: Container(
@@ -31,21 +30,17 @@ class SignInViewState extends State<SingInView> {
               Container(
                 height: ScreenUtil().setHeight(500),
                 width: MediaQuery.of(context).size.width,
-                child: ClipPath(
-                  clipper:
-                      CustomShape(), // this is my own class which extendsCustomClipper
-                  child: Container(
-                    height: ScreenUtil().setHeight(150),
-                    color: Theme.of(context).primaryColor,
-                    child: Center(
-                      child: Text(
-                        "MoneyPit",
-                        style: GoogleFonts.pacifico(
-                          textStyle: TextStyle(
-                            color: Colors.white,
-                            letterSpacing: .5,
-                            fontSize: ScreenUtil().setSp(120),
-                          ),
+                child: Container(
+                  height: ScreenUtil().setHeight(150),
+                  // color: Theme.of(context).primaryColor,
+                  child: Center(
+                    child: Text(
+                      "MoneyPit",
+                      style: GoogleFonts.pacifico(
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          letterSpacing: .5,
+                          fontSize: ScreenUtil().setSp(120),
                         ),
                       ),
                     ),
@@ -65,7 +60,7 @@ class SignInViewState extends State<SingInView> {
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: S.of(context).password,
+                      labelText: S.of(context)!.password,
                       labelStyle: GoogleFonts.lato()),
                 ),
               ),
@@ -75,12 +70,12 @@ class SignInViewState extends State<SingInView> {
               Container(
                 width: ScreenUtil().setWidth(600),
                 height: ScreenUtil().setHeight(100),
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/Home');
                   },
                   child: Text(
-                    S.of(context).login,
+                    S.of(context)!.login,
                     style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(40)),
                   ),
                 ),
@@ -92,16 +87,15 @@ class SignInViewState extends State<SingInView> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      S.of(context).dontHaveAccount,
+                      S.of(context)!.dontHaveAccount,
                       style: GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                     ),
-                    FlatButton(
-                      padding: EdgeInsets.all(8.0),
+                    TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/SignUp');
                       },
                       child: Text(
-                        S.of(context).register,
+                        S.of(context)!.register,
                         style:
                             GoogleFonts.lato(fontSize: ScreenUtil().setSp(30)),
                       ),
@@ -144,7 +138,6 @@ class UsernameField extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final myTextControllerUpdates = TextEditingController();
-    // TODO: implement build
     final controller = useTextEditingController(text: 'initial text');
     final update = useValueListenable(myTextControllerUpdates);
 
@@ -153,7 +146,7 @@ class UsernameField extends HookWidget {
       child: TextField(
         decoration: InputDecoration(
             border: OutlineInputBorder(),
-            labelText: S.of(context).username,
+            labelText: S.of(context)!.username,
             labelStyle: GoogleFonts.lato()),
       ),
     );

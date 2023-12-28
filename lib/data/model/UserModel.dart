@@ -6,7 +6,11 @@ class UserModel {
   String income;
 
   UserModel(
-      {this.userId, this.username, this.password, this.email, this.income});
+      {required this.userId,
+      required this.username,
+      required this.password,
+      required this.email,
+      required this.income});
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
